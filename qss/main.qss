@@ -209,11 +209,11 @@ QTextEdit:focus{
 /* Button                                          */
 /* =============================================== */
 QPushButton {
-    color: #66AAEE;
+    color: #FF0000;
     border: 1px solid #666666;
     border-radius: 2px;
-    /*background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, 
-        stop: 0 #999999, stop: 0.05 #888888,stop: 0.5 #888888, 
+    /*background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #999999, stop: 0.05 #888888,stop: 0.5 #888888,
         stop: 0.9 #999999, stop: 1 #999999);*/
     padding: 1px 4px;
     min-width: 50px;
@@ -228,7 +228,7 @@ QPushButton:hover{
 
 QPushButton:pressed
 {
-    border-width: 1px;      
+    border-width: 1px;
     background-color: #DCDD9922;
     border-color: #666666;
 }
@@ -349,7 +349,7 @@ QSlider::groove{
     border: 1px solid #666666;
     background: #DC333333;
 }
-QSlider::handle {/*设置中间的那个滑动的键*/                           
+QSlider::handle {/*设置中间的那个滑动的键*/
     border: 1px solid #666666;
     background: #66AAEE;
 }
@@ -373,7 +373,7 @@ QSlider::add-page{/*还没有滑上去的地方*/
     border: 1px solid #666666;
     background:#999999;
 }
-QSlider::sub-page{/*已经划过的从地方*/                            
+QSlider::sub-page{/*已经划过的从地方*/
     background: #DC88BBFF;
 }
 
@@ -480,7 +480,7 @@ QTabWidget::tab-bar {
 QTabBar::tab {
     background: #DC333333;
     border: 1px solid #666666;
-    padding: 3px 5px;    
+    padding: 3px 5px;
 }
 QTabBar::tab:hover {
     background: #66AAEE;
