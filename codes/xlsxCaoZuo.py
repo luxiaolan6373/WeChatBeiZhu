@@ -15,10 +15,8 @@ class KeHuGuanLi():
         self.ws.freeze_panes = 'B2'
 
     def save(self):
-        try:
-            self.wb.save(self.filename)
-        except:
-            pass
+        self.wb.save(self.filename)
+
     def getLabel(self):
         '''
         获取所有标签的文本

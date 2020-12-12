@@ -14,31 +14,48 @@ class Baiduorc():
                 self.access_token = access_token
             else:
                 self.access_token = None
-        except:
+        except Exception as err:
+            print(err)
+            input('等待结束')
             self.access_token = None
+
         #获取鉴权接口,就是身份验证...
-    def get_text(self,imagePath):
+    def get_text(self,image):
         '''
         识别文字
-        :param imagePath: 图片地址
+        :param imageP: 图片数据
         :return: 返回结果
         '''
 
         request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic"
         # 二进制方式打开图片文件
-        with open(imagePath,'rb')as f:
-            img=f.read()
-        img = base64.b64encode(img)
+        img = base64.b64encode(image)
         params = {"image": img}
         access_token = self.access_token
         request_url = request_url + "?access_token=" + access_token
         headers = {'content-type': 'application/x-www-form-urlencoded'}
         response = requests.post(request_url, data=params, headers=headers)
-        if response:
-
-            return response.json()
-        else:
+        try:
+            if response:
+                return response.json()
+            else:
+                return None
+        except Exception as err:
+            print('百度识图错误',err)
             return None
+if __name__ == '__main__':
+    AK = "Weui83nXBM1ox6ozFzPF9bng"
+    SK = "4AEmIGiInMv7gzlATntAs3pjHZrlCrsK"
+    bd = Baiduorc(AK="Weui83nXBM1ox6ozFzPF9bng", SK="4AEmIGiInMv7gzlATntAs3pjHZrlCrsK")
+    imagePath = "dqyh.png"
+    with open(imagePath, 'rb')as f:
+        img = f.read()
+
+    print( bd.get_text(image=img))
+    input('回车退出')
+
+
+
 
 
 
