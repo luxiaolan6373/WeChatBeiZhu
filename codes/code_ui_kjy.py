@@ -7,7 +7,6 @@ from codes.moni import Mouse_And_Key
 from PyQt5.QtCore import pyqtSignal,QObject
 import pickle
 import time,codes.qjbl
-
 class Init_ui_kjy():
     def __init__(self, window: QMainWindow, ui: Ui_Form, main_Window: QMainWindow, ui_main: Ui_MainWindow):
         self.window = window
@@ -16,26 +15,17 @@ class Init_ui_kjy():
         self.ui_main = ui_main
         self.wechatHwnd = codes.qjbl.get_hwnd()
         self.isok = False
-        self.path = "datas\\快捷语.txt"
+        self.path = "./datas/快捷语.txt"
         self.setPath = 'datas\\changed.pkl'
         self.set()
-
     def set(self):
-
-        self.window.setWindowTitle('快捷语句')
-        self.window.resize(self.window.width(),self.main_Window.height())
-        self.window.move(self.main_Window.x()+self.main_Window.width(),self.main_Window.y())
-        self.window.setWindowIcon(QIcon('logo.ico'))
-        # 设置,位置,大小,窗口样式
-        self.window.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.WindowCloseButtonHint |Qt.WindowMinimizeButtonHint)
-        self.window.move(self.main_Window.x() + self.main_Window.window().width(), self.main_Window.y())
-        self.window.resize(self.window.width(), self.main_Window.height())
         # 绑定信号
         self.ui.tabw_kjy.cellChanged.connect(self.cellChanged)
         self.ui.cb_enter.stateChanged[int].connect(self.cb_state_changed)
         self.ui.cb_ctrl_enter.stateChanged[int].connect(self.cb_state_changed)
         self.ui.bt_addLine.clicked.connect(self.add_line)
         self.ui.bt_subLine.clicked.connect(self.sub_line)
+        self.window.closeEvent = self.close
 
         # 读取设置
         try:
@@ -49,7 +39,6 @@ class Init_ui_kjy():
         self.ui.tabw_kjy.setWordWrap(True)
         # 加载快捷语列表
         self.tab_init()
-
     def tab_init(self):
         with open(self.path, 'r') as f:
             text = f.read()
@@ -68,11 +57,14 @@ class Init_ui_kjy():
             bt.clicked.connect(lambda: self.send_message())
             self.ui.tabw_kjy.setCellWidget(i, 1, bt)
         self.isok = True
-
+    def close(self, enent):
+        self.move_sg.move_sg=None
 
     def cellChanged(self, row, column):
         # 列大小根据内容调整大小
         self.ui.tabw_kjy.resizeRowsToContents()
+
+
         if self.isok == True:
             text = ''
             length = self.ui.tabw_kjy.rowCount()
@@ -144,5 +136,3 @@ class Init_ui_kjy():
     def sub_line(self):
         if self.ui.tabw_kjy.rowCount() > 0:
             self.ui.tabw_kjy.setRowCount(self.ui.tabw_kjy.rowCount() - 1)
-    def __del__(self):
-        print ('__del__')

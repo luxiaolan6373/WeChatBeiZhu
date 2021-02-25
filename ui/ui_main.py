@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/ui_main.ui'
+# Form implementation generated from reading ui file 'ui\ui_main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -14,32 +14,28 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(228, 538)
+        MainWindow.resize(232, 555)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.vbox_main = QtWidgets.QVBoxLayout(self.centralwidget)
-        self.vbox_main.setContentsMargins(0, 0, 0, 0)
-        self.vbox_main.setSpacing(0)
-        self.vbox_main.setObjectName("vbox_main")
+        self.hbox_main = QtWidgets.QHBoxLayout(self.centralwidget)
+        self.hbox_main.setContentsMargins(0, 0, 0, 0)
+        self.hbox_main.setSpacing(2)
+        self.hbox_main.setObjectName("hbox_main")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setSpacing(2)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.tabw_main = QtWidgets.QTableWidget(self.centralwidget)
         self.tabw_main.setObjectName("tabw_main")
         self.tabw_main.setColumnCount(0)
         self.tabw_main.setRowCount(0)
-        self.vbox_main.addWidget(self.tabw_main)
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_2.setContentsMargins(-1, -1, 0, 0)
-        self.horizontalLayout_2.setSpacing(0)
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.verticalLayout.addWidget(self.tabw_main)
         self.bt_excel = QtWidgets.QPushButton(self.centralwidget)
         self.bt_excel.setObjectName("bt_excel")
-        self.horizontalLayout_2.addWidget(self.bt_excel)
-        self.vbox_main.addLayout(self.horizontalLayout_2)
-        self.bt_save = QtWidgets.QPushButton(self.centralwidget)
-        self.bt_save.setObjectName("bt_save")
-        self.vbox_main.addWidget(self.bt_save)
+        self.verticalLayout.addWidget(self.bt_excel)
         self.bt_kjyj = QtWidgets.QPushButton(self.centralwidget)
         self.bt_kjyj.setObjectName("bt_kjyj")
-        self.vbox_main.addWidget(self.bt_kjyj)
+        self.verticalLayout.addWidget(self.bt_kjyj)
+        self.hbox_main.addLayout(self.verticalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -48,7 +44,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.tabw_main.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:600; color:#ff0000;\">使用说明:</span></p><p><span style=\" font-size:11pt; font-weight:600;\">1.</span><span style=\" font-size:11pt;\">首先请自己在</span><span style=\" font-size:11pt; color:#0000ff;\">excel表格</span><span style=\" font-size:11pt;\">中的第一行中设置好</span><span style=\" font-size:11pt; color:#0000ff;\">标签</span><span style=\" font-size:11pt;\">,随意多少个!然后重新运行软件!</span></p><p><span style=\" font-size:11pt; color:#0000ff;\">例如: 微信|姓|名||职位|留言|手机号|家庭住址|评分 等等</span><br/></p><p><span style=\" font-size:11pt; font-weight:600;\">2.</span><span style=\" font-size:11pt; color:#0000ff;\">Excel表</span><span style=\" font-size:11pt;\">如果点不开</span></p><p><span style=\" font-size:11pt;\">(说明你电脑默认的表格软件配置不对劲,那你就在文件夹datas中找到客户表格)</span><br/></p><p><span style=\" font-size:11pt; font-weight:600;\">3.</span><span style=\" font-size:11pt;\">所有的</span><span style=\" font-size:11pt; color:#0000ff;\">内容</span><span style=\" font-size:11pt;\">都可以直接编辑,编辑后,点击保存修改即可保存</span><br/></p><p><span style=\" font-size:11pt;\">4.快捷语句(顾名思义就是可以存储一些常用的语句,支持使用变量)</span></p></body></html>"))
+        self.tabw_main.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:600; color:#ff0000;\">使用说明:</span></p><p><span style=\" font-size:11pt; font-weight:600;\">1.</span><span style=\" font-size:11pt;\">首先请自己在</span><span style=\" font-size:11pt; color:#0000ff;\">excel表格</span><span style=\" font-size:11pt;\">中的第一行中设置好</span><span style=\" font-size:11pt; color:#0000ff;\">标签</span><span style=\" font-size:11pt;\">,随意多少个!然后重新运行软件!</span></p><p><span style=\" font-size:11pt; color:#0000ff;\">例如: 微信|姓|名||职位|留言|手机号|家庭住址|评分 等等</span><br/></p><p><span style=\" font-size:11pt; font-weight:600;\">2.</span><span style=\" font-size:11pt; color:#0000ff;\">Excel表</span><span style=\" font-size:11pt;\">如果点不开</span></p><p><span style=\" font-size:11pt;\">(说明你电脑默认的表格软件配置不对劲,那你就在文件夹datas中找到客户表格)</span><br/></p><p><span style=\" font-size:11pt; font-weight:600;\">3.</span><span style=\" font-size:11pt;\">所有的</span><span style=\" font-size:11pt; color:#0000ff;\">内容</span><span style=\" font-size:11pt;\">都可以直接编辑,编辑后会自动保存</span><br/></p><p><span style=\" font-size:11pt;\">4.快捷语句(顾名思义就是可以存储一些常用的语句,支持使用变量)</span></p><p><span style=\" font-size:11pt;\">5.每一项都支持颜色关键字(就是改变某一项的颜色)</span></p><p><span style=\" font-size:11pt; color:#0000ff;\">例如: </span><span style=\" font-size:11pt; color:#ff0000;\">2月1号跟王总吃饭#红色</span><span style=\" font-size:11pt; color:#0000ff;\">  这样就会自动变成红色 如果没有关键字就默认为黑色</span></p><p><span style=\" font-size:11pt; color:#0000ff;\">支持的颜色有: </span><span style=\" font-size:11pt; color:#dc143c;\">#红色</span><span style=\" font-size:11pt; color:#0000ff;\"/><span style=\" font-size:11pt; color:#ff1493;\">#粉色</span><span style=\" font-size:11pt; color:#0000ff;\"> #蓝色 </span><span style=\" font-size:11pt; color:#00ff00;\">#绿色</span><span style=\" font-size:11pt; color:#0000ff;\"/><span style=\" font-size:11pt; color:#ffa500;\">#橙色</span><span style=\" font-size:11pt; color:#0000ff;\"/><span style=\" font-size:11pt; color:#ffd700;\">#黄色</span><span style=\" font-size:11pt; color:#0000ff;\"/><span style=\" font-size:11pt; color:#00ffff;\">#青色</span><span style=\" font-size:11pt; color:#0000ff;\"/><span style=\" font-size:11pt; color:#cd853f;\">#茶色 </span><span style=\" font-size:11pt; color:#7fff00;\">#草色</span></p></body></html>"))
         self.bt_excel.setText(_translate("MainWindow", "Excel表"))
-        self.bt_save.setText(_translate("MainWindow", "保存修改"))
         self.bt_kjyj.setText(_translate("MainWindow", "快捷语句"))

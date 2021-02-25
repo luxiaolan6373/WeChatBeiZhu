@@ -6,17 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>228</width>
-    <height>538</height>
+    <width>232</width>
+    <height>555</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="vbox_main">
+   <layout class="QHBoxLayout" name="hbox_main">
     <property name="spacing">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="leftMargin">
      <number>0</number>
@@ -31,23 +31,17 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QTableWidget" name="tabw_main">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ff0000;&quot;&gt;使用说明:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;1.&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;首先请自己在&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;excel表格&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;中的第一行中设置好&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;标签&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;,随意多少个!然后重新运行软件!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;例如: 微信|姓|名||职位|留言|手机号|家庭住址|评分 等等&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;2.&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;Excel表&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;如果点不开&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;(说明你电脑默认的表格软件配置不对劲,那你就在文件夹datas中找到客户表格)&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;3.&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;所有的&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;内容&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;都可以直接编辑,编辑后,点击保存修改即可保存&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;4.快捷语句(顾名思义就是可以存储一些常用的语句,支持使用变量)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <property name="spacing">
-       <number>0</number>
+       <number>2</number>
       </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
+      <item>
+       <widget class="QTableWidget" name="tabw_main">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ff0000;&quot;&gt;使用说明:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;1.&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;首先请自己在&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;excel表格&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;中的第一行中设置好&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;标签&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;,随意多少个!然后重新运行软件!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;例如: 微信|姓|名||职位|留言|手机号|家庭住址|评分 等等&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;2.&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;Excel表&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;如果点不开&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;(说明你电脑默认的表格软件配置不对劲,那你就在文件夹datas中找到客户表格)&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;3.&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;所有的&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;内容&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;都可以直接编辑,编辑后会自动保存&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;4.快捷语句(顾名思义就是可以存储一些常用的语句,支持使用变量)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;5.每一项都支持颜色关键字(就是改变某一项的颜色)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;例如: &lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#ff0000;&quot;&gt;2月1号跟王总吃饭#红色&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;  这样就会自动变成红色 如果没有关键字就默认为黑色&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt;支持的颜色有: &lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#dc143c;&quot;&gt;#红色&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;/&gt;&lt;span style=&quot; font-size:11pt; color:#ff1493;&quot;&gt;#粉色&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;&gt; #蓝色 &lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#00ff00;&quot;&gt;#绿色&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;/&gt;&lt;span style=&quot; font-size:11pt; color:#ffa500;&quot;&gt;#橙色&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;/&gt;&lt;span style=&quot; font-size:11pt; color:#ffd700;&quot;&gt;#黄色&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;/&gt;&lt;span style=&quot; font-size:11pt; color:#00ffff;&quot;&gt;#青色&lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#0000ff;&quot;/&gt;&lt;span style=&quot; font-size:11pt; color:#cd853f;&quot;&gt;#茶色 &lt;/span&gt;&lt;span style=&quot; font-size:11pt; color:#7fff00;&quot;&gt;#草色&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QPushButton" name="bt_excel">
         <property name="text">
@@ -55,21 +49,14 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="bt_kjyj">
+        <property name="text">
+         <string>快捷语句</string>
+        </property>
+       </widget>
+      </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QPushButton" name="bt_save">
-      <property name="text">
-       <string>保存修改</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="bt_kjyj">
-      <property name="text">
-       <string>快捷语句</string>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>
